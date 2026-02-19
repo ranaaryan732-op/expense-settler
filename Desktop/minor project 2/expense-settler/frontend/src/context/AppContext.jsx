@@ -3,7 +3,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 const AppContext = createContext(null);
-const API = '/api';
+const API = import.meta.env.VITE_API_URL || '/api';
 
 export const CURRENCIES = [
     { code: 'INR', symbol: '₹', label: 'Indian Rupee' },
